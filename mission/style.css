@@ -1,3 +1,37 @@
-footer{
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
+    font-family: "Times New Roman", serif;
+}
+.title h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    margin-bottom: 10px;
+}
+.title h2 {
+    color: #006EB6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+main {
+    text-align: left; 
+    line-height: 2; 
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+main p {
+    margin-bottom: 15px;
+}
+.does-list {
+    padding-left: 40px; 
+}
+footer img {
+    margin-top: 20px;
+    width: 150px; 
+    height: auto; 
 }
