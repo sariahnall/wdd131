@@ -6,7 +6,7 @@
     font-family: "Times New Roman", serif;
 }
 .title h1 {
-    font-size: 20px;
+    font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 2px; 
     margin-bottom: 10px;
@@ -29,9 +29,9 @@ main p {
 }
 .does-list {
     padding-left: 40px; 
+    padding-top: 10px;
 }
 footer img {
     margin-top: 20px;
     width: 150px; 
-    height: auto; 
 }
