@@ -1,4 +1,11 @@
-.content {
+.dark{
+    background-color: darkgray;
+    color: white;
+}
+.dark h2{
+    color: rgb(160, 212, 237);
+}
+#content {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
