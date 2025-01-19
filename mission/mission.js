@@ -10,6 +10,6 @@ function changeTheme() {
         img.src = "byui-logo_white.png";
     } else {
         body.classList.remove('dark');
-        img.src = "byui-logo_blue.webbp";
+        img.src = "byui-logo_blue.webp";
     }
 }
