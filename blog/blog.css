@@ -14,20 +14,21 @@ body{
 }
   
 header{
-    border-bottom: 2px solid var(--gold-color);
     text-align: center;
 }
 
 .nav{
-    display: flex;
-    justify-content: right;
+    display: grid;
+    grid-template-columns: 90px 90px 90px;
+    justify-content: end;
+    justify-items: end;
     list-style: none;
     border-top: 2px solid var(--gold-color);
+    border-bottom: 2px solid var(--gold-color);
 }
 
 .nav li{
-    margin-right: 20px;
-    margin-top: 10px;
+    margin: 10px 30px 10px 0px;
 }
 
 .nav a:link, a:visited{
