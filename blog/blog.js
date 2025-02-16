@@ -8,8 +8,9 @@ const articles = [
 		imgSrc: 'https://upload.wikimedia.org/wikipedia/en/5/5f/Magkycover2.jpg',
 		imgAlt: 'Book cover for Septimus Heap 1',
 		ages: '10-14',
+		author: 'Angie Sage',
 		genre: 'Fantasy',
-		stars: '****'
+		stars: '⭐⭐⭐⭐'
 	},
 	{
 		id: 2,
@@ -21,7 +22,52 @@ const articles = [
 			'https://books.google.com/books/content/images/frontcover/xWuyBAAAQBAJ?fife=w300',
 		imgAlt: 'Book cover for Magnus Chase 1',
 		ages: '12-16',
+		author: 'Rick Riordan',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+		"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+		imgSrc:
+		"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		author: 'David Eddings',
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
 	}
-]
+];
+
+console.log(articles[1].title)
+
+const container=document.querySelector('#maincontent');
+
+articles.forEach(function(item){
+
+	let book = document.createElement('article');
+
+	book.setAttribute('class', 'book');
+
+	let html = `
+		<div class="book-rates">
+	        <em><p class="date">${item.date}</p></em>
+	        <p>${item.ages}</p>
+	        <p>${item.author}</p>
+	        <p>${item.genre}</p>
+			<p>${item.stars}</p>
+	    </div>
+	    <div class="book-info">
+	        <h2 class= "title">${item.title}</h2>
+	        <img src="${item.imgSrc}" alt="${item.imgAlt}">
+	        <p>${item.description}</p>
+	    </div>`
+
+	book.innerHTML = html;
+
+	container.appendChild(book);
+
+})
