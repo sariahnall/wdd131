@@ -21,33 +21,40 @@
                 <h1>Recipe Book</h1>
             </div>
             <div id="search">
-
+                <input type="text" placeholder="Find a recipe" aria-label="Search recipes">
+                <button type="submit" aria-label="Search">
+                    <img src="images/search.svg" alt="Search Icon">
+                </button>
             </div>
         </header>
         <main>
             <div class="recipe">
-                <h2>Apple Crisp</h2>
-                <span
-	                class="rating"
-	                role="img"
-	                aria-label="Rating: 4 out of 5 stars"
-                >
-	                <span aria-hidden="true" class="icon-star">⭐</span>
-	                <span aria-hidden="true" class="icon-star">⭐</span>
-	                <span aria-hidden="true" class="icon-star">⭐</span>
-	                <span aria-hidden="true" class="icon-star-empty">⭐</span>
-	                <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-                <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream</p>
+                <img src="images/apple-crisp.jpg" alt="apple crisp">
+                <div class="recipe-content">
+                    <p class="tag">dessert</p>
+                    <h2>Apple Crisp</h2>
+                    <span
+	                    class="rating"
+	                    role="img"
+	                    aria-label="Rating: 4 out of 5 stars">
+	                    <span aria-hidden="true" class="icon-star">⭐</span>
+	                    <span aria-hidden="true" class="icon-star">⭐</span>
+	                    <span aria-hidden="true" class="icon-star">⭐</span>
+	                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
+	                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    </span>
+                    <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream</p>
+                </div>
+                
             </div>
         </main>
         <footer>
             <div class="social">
-                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
                 <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
                 <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
-                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a> 
             </div>
+            <p class="attribution">Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates</p>
         </footer>
     </div>
 </body>
