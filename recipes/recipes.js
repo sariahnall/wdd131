@@ -280,4 +280,7 @@ const recipes = [
 	}
 ]
 
-export default recipes
+const randomIndex = Math.floor(Math.random() * recipes.length);
+const randomObject = recipes[randomObject];
+
+console.log(randomObject);
