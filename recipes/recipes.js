@@ -289,14 +289,19 @@ function getRandomRecipe(recipes){
 
 function recipeTemplate(recipe){
 	return `
-		<img src="${recipe.image}" alt="${recipe.name}">
-    	<div class="recipe-content">
-    	    <class="tag">${tagsTemplate(recipe.tags)}</p>
-    	    <h2>${recipe.name}</h2>
-    	    <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
-		        ${ratingTemplate(recipe.rating)}
-    	    </span>
-    	    <p class="description">${recipe.description}</div> `
+		<div class="recipe">
+			<img src="${recipe.image}" alt="${recipe.name}">
+    		<div class="recipe-content">
+				<div class="tags">
+					${tagsTemplate(recipe.tags)}
+				</div>
+    		    <h2>${recipe.name}</h2>
+    		    <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+			        ${ratingTemplate(recipe.rating)}
+    		    </span>
+    		    <p class="description">${recipe.description}</p>
+			</div> 
+		</div> `
 	
 };
 
@@ -321,16 +326,40 @@ function ratingTemplate(rating){
 };
 
 function renderRecipes(recipeList){
-	let recipeContainer = document.querySelector('.recipe');
+	let recipeContainer = document.querySelector('.recipes');
 	let html = recipeTemplate(recipeList);
 	recipeContainer.innerHTML += html;
 }
 
 function init(){
 	const recipe = getRandomRecipe(recipes);
-	let recipeContainer = document.querySelector('.recipe');
+	let recipeContainer = document.querySelector('.recipes');
 	recipeContainer.innerHTML= '';
 	renderRecipes(recipe);
 };
 
 init();
+
+let search = document.querySelector('#search button')
+
+search.addEventListener('click', function(){
+	let recipeContainer = document.querySelector('.recipes');
+	recipeContainer.innerHTML = '';
+	let string = document.querySelector('#search input').value.toLowerCase()
+	let filteredRecipes = recipes.filter(function(recipe){
+		return(
+			recipe.name.toLowerCase().includes(string.toLowerCase()) ||
+			recipe.description.toLowerCase().includes(string.toLowerCase()) ||
+			recipe.tags.find((tag) => tag.toLowerCase().includes(string.toLowerCase()))
+		);
+	})
+	const sorted = filteredRecipes.sort((a,b) => {
+		if (a.name < b.name) return -1
+		else if (a.name > b.name) return 1
+		else return 0
+	})
+	sorted.forEach(function(recipe){
+		renderRecipes(recipe);
+		console.log(recipe);
+	})
+})

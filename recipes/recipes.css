@@ -74,13 +74,22 @@ main {
 .recipe {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
     background-color: var(--text-light);
     border: 1px solid var(--text-dark);
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 1rem;
 }
 
-
+.tags{
+    display: flex;
+    gap: 10px;
+}
 .tag{
     background-color: white;
     border: 1px solid var(--text-dark);
