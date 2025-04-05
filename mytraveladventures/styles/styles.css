@@ -86,7 +86,9 @@ footer .social img{
 footer p:hover{
     text-decoration: underline;
 }
-
+.javascripthide{
+    display: none;
+}
 /* Home CSS */
 #hero {
     display: grid;
@@ -164,11 +166,7 @@ footer p:hover{
     color: var(--accent2-color);
     transform: scale(1.05);
 }
-
 /* Trips Page */
-#javascripthide{
-    display: none;
-}
 #trip-list {
     margin-top: 30px;
 }
