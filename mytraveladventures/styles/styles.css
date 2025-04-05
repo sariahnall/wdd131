@@ -1,0 +1,199 @@
+/* all pages CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #123055;
+    --secondary-color: #FBDB84;
+    --accent1-color: #61210F;
+    --accent2-color: #F0F8FF;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Bebas Neue", sans-serif;
+    --paragraph-font: "Merriweather", serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: var(
+      --primary-color
+    ); /* headlines on a white background */
+    --headline-color-on-color: white; /* headlines on a colored background */
+    --paragraph-color-on-white: var(
+      --accent1-color
+    ); /* paragraph text on a white background */
+    --paragraph-color-on-color: white; /* paragraph text on a colored background */
+    --paragraph-background-color: var(--primary-color);
+    --nav-link-color: var(--primary-color);
+    --nav-background-color: var(--secondary-color);
+    --nav-hover-link-color: var(--accent2-color);
+    --nav-hover-background-color: var(--primary-color);
+}
+body{
+    min-width: 350px;
+    margin: 0;
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font);
+}
+body p{
+    font-family: var(--paragraph-font);
+}
+.title{
+    color: var(--headline-color-on-white);
+}
+.head-block{
+    display: flex;    
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+.logo-link{
+    padding-top: 2%;
+    align-self: center;
+}
+.logo{
+    width: 70px;
+    border-radius: 20%;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--paragraph-font);
+    font-size: large;
+}
+nav a{
+    align-self: center;
+    text-decoration: none;
+    color: var(--paragraph-color-on-color);
+    padding: 2%;
+}
+nav a:hover{
+    background-color: var(--accent2-color);
+    color: black;
+}
+footer{
+    background-color: var(--primary-color);
+    color: white;
+    /* padding: 25px 50px; */
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    color: black;
+}
+footer p{
+    font-size: .8em;
+}
+footer .social img{
+    width: 30px;
+    padding: 15px;
+}
+footer p:hover{
+    text-decoration: underline;
+}
+
+/* Home CSS */
+
+#hero {
+    display: grid;
+    grid-template-columns: 50px 1fr 3fr 1fr 50px;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+#hero-box{
+    grid-column: 1/6;
+    grid-row: 1/4;
+    z-index: -1;
+}
+#hero-img{
+    width: 100%;
+    opacity: 0.5;
+}
+#hero-msg {
+    grid-column: 2/5;
+    grid-row: 1/2;
+    margin-top: 10%;
+    color: black;
+    background-color: var(--accent2-color);
+}
+#hero-para {
+    font-size: medium;
+}
+#aboutme {
+    margin-top: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10%;
+}
+#aboutme img{
+    max-width: 100%;
+    grid-row: 1/3;
+    border: 5px double var(--accent1-color);
+}
+#small-about{
+    font-size: small;
+}
+#medium-about{
+    display: none;
+}
+#large-about{
+    display: none;
+}
+
+/* Trips Page */
+
+@media screen and (min-width: 500px) {
+    /* All Pages */
+    .head-block{
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .logo-link{
+        padding-bottom: 2%;
+        margin-left: 3%;
+    }
+    nav {
+        flex-direction: row;
+        justify-content: right;
+    }
+    nav a{
+        padding: 5% 50%;
+    }
+    footer p{
+        font-size: 1em;
+    }
+    /* Home Page */
+    #small-about{
+        display: none;
+    }
+    #medium-about{
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    /* All Pages */
+    footer p{
+        font-size: 1.3em;
+    }
+    /* Home Page */
+    #hero-msg{
+        grid-row: 2/3;
+        align-content: center;
+    }
+    #aboutme{
+        margin: 5%;
+    }
+    #medium-about{
+        display: none;
+    }
+    #large-about{
+        display: block;
+    }
+}
