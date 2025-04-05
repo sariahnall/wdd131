@@ -2,20 +2,20 @@ const trips = [
 	{
 		destination: 'Greece',
 		description: 'A beautiful country with rich history, stunning views, and delicious food.',
-        main_img: 'images/greece-main.JPG',
+        main_img: 'images/greece-main.webp',
         img_alt: 'Beautiful sunset in Athens, Greece',
 		map: 'link to map',
 		datewent: 'June 19th-30th 2023',
 		image_gallery: [
-			'images/greece-1.JPG',
-			'images/greece-2.JPG',
+			'images/greece-1.webp',
+			'images/greece-2.webp',
 			
 		],
     },
     {
 		destination: 'Yellowstone',
 		description: 'Experience the wonders of nature in one of Americas most iconic national parks.',
-        main_img: 'images/yellowstone-main.JPG',
+        main_img: 'images/yellowstone-main.webp',
         img_alt: 'Waterfall in Yellowstone Canyon',
 		map: '',
 		datewent: 'July 16th 2024',
@@ -28,10 +28,10 @@ const trips = [
     {
         destination: 'Goldbug Hot Springs',
 		description: 'Relax in the natural hot springs nestled in the mountains.',
-        main_img: 'images/goldbughotsprings-main.JPG',
+        main_img: 'images/goldbughotsprings-main.webp',
         img_alt: 'Mountain View on goldbug trail to hot springs',
 		map: '',
-		datewent: 'July 16th 2024',
+		datewent: 'March 1st 2025',
 		image_gallery: [
 			'',
 			'',
@@ -83,7 +83,7 @@ function tripDetailsTemplate(trip) {
             <p><strong>When:</strong> ${trip.datewent}</p>
             <p><strong>Description:</strong> ${trip.description}</p>
             <button class="see-more-btn" onclick="toggleTripDetails('${trip.destination}')">See More</button>
-            
+
             <div class="trip-details" id="details-${trip.destination}" style="display:none;">
                 <h4>Gallery:</h4>
                 <div class="image-gallery">
@@ -112,4 +112,5 @@ function toggleTripDetails(destination) {
     }
 }
 
+// Call the renderTrips function to populate the page
 renderTrips();
